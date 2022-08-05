@@ -20,7 +20,7 @@ function AllMoviesComp() {
         if (location.state) {
             let find = data.filter(m => m._id === location.state.movie._id)
             setMovies(find)
-            location.state = null
+
         }
 
     }
@@ -30,9 +30,12 @@ function AllMoviesComp() {
         if (findMovie) {
             let findMovies = movies.filter(m => m.name == findMovie)
             setMovies(findMovies)
+        }
+        if (location.state) {
+            location.state = null
+            setRefresh(!refresh)
 
         }
-        setRefresh(!refresh)
     }
 
     const deleteMovie = async (movieId) => {

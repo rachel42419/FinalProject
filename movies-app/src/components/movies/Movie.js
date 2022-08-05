@@ -23,7 +23,7 @@ function MovieComp(props) {
 
         <h4>{props.movie.name}, {new Date(props.movie.premieredYear).getFullYear()}</h4>
         <span> Genres: {props.movie.genres.join(', ')}</span><br />
-        {/* <img src={props.movie.pictureUrl} style={{ height: "100px" }} /> */}
+        <img src={props.movie.pictureUrl} style={{ height: "100px" }} />
 
 
         <SubscriptionsWatchedComp movie={props.movie} />
