@@ -27,7 +27,7 @@ function SubscriptionsWatchedComp(props) {
     useEffect(() => {
 
         getSubscriptions()
-    }, [])
+    })
 
 
     return members[0] && <div style={{ border: "5px solid red", width: "80%" }}>
